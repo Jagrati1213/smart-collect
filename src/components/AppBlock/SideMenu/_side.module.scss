@@ -1,0 +1,28 @@
+.logo_container {
+  overflow: hidden;
+  display: flex;
+  height: 80px;
+
+  .logo_image {
+    width: 90px;
+    margin-left: -10px;
+  }
+
+  .logo_title_image {
+    width: 200px;
+  }
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+  }
+}
+
+.power_by {
+  width: 35px;
+  img {
+    width: 100%;
+    object-fit: contain;
+  }
+}

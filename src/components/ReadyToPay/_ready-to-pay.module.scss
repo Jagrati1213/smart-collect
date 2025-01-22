@@ -1,0 +1,9 @@
+.ready_to_pay {
+  // width: 99%;
+  .details {
+    :global(.ant-row) {
+      margin: 0 !important;
+      padding-bottom: 2rem;
+    }
+  }
+}

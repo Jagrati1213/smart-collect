@@ -1,0 +1,105 @@
+@import url("../../index.css");
+
+$gap-value: 1.366rem;
+
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background: white;
+}
+
+// App block
+.app_container {
+  width: calc(100% - $gap-value);
+  // min-height: 100vh;
+  // overflow-x: hidden;
+  padding: $gap-value;
+  padding-right: 0;
+  // display: flex;
+  background-color: white;
+
+  // Side bar
+  .app_container_side_menu {
+    background-color: var(--dark-blue);
+    color: var(--white);
+    border-radius: 10px;
+    height: calc(100vh - 3rem);
+    inset-inline-start: 0;
+    top: $gap-value;
+    scrollbar-width: thin;
+    scrollbar-gutter: stable;
+    position: fixed;
+    left: $gap-value;
+    top: $gap-value;
+
+    // menu ul
+    :global(.ant-layout-sider-children) {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+
+      // menu li
+      :global(.ant-menu-item) {
+        color: var(--white);
+        margin-left: 0;
+        margin-right: 0;
+        width: 100%;
+        border-radius: 0;
+        margin-bottom: 2rem;
+        height: auto;
+        &:hover {
+          color: var(--white) !important;
+        }
+      }
+
+      // menu selected li
+      :global(.ant-menu-item-selected) {
+        background-color: var(--off-white);
+      }
+    }
+
+    // menu container
+    :global(.ant-menu) {
+      background-color: transparent;
+    }
+  }
+
+  .app_container_content {
+    transition: margin-left 0.3s ease;
+    flex-grow: 1;
+    overflow-y: auto;
+    height: calc(100vh - 55px);
+    background: white;
+    &::-webkit-scrollbar {
+      display: none;
+    }
+  }
+
+  :global(.collapse) {
+    max-width: 300px !important;
+    min-width: 300px !important;
+    width: 300px !important;
+    flex: 0 0 300px !important;
+  }
+
+  // Menu button
+  .menu_button {
+    background-color: var(--dark-blue);
+    color: var(--white);
+    padding: 1.2rem 0;
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    left: 110px;
+    transform: translateY(-50%);
+    width: 15px;
+    height: 57px;
+    border-radius: 0px 15px 15px 0px;
+    z-index: 1;
+    &:global(.expended) {
+      left: 330px;
+      border-radius: 15px 0 0 15px;
+    }
+  }
+}

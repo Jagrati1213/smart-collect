@@ -1,0 +1,69 @@
+@import url("../../../index.css");
+
+.slider_container {
+  background-color: var(--light-green);
+  padding: 2rem 0;
+  border-radius: 5px;
+
+  .value {
+    color: var(--blue);
+    margin: 0;
+  }
+  .date {
+    font-size: 19px;
+    font-weight: 500;
+  }
+  // Carousel card
+  .d_card {
+    border-right: 1px solid var(--slate);
+  }
+
+  // ant typography
+  :global(.ant-typography) {
+    text-align: center;
+    display: block;
+    width: 100%;
+  }
+
+  // slick arrow
+  :global(.slick-arrow) {
+    background: var(--light-blue);
+    // opacity: 1;
+    height: 25px;
+    width: 15px;
+    &::before {
+      color: var(--blue);
+      position: absolute;
+      content: "";
+      display: inline-block;
+      width: 8px;
+      height: 8px;
+      border: 0 solid var(--blue);
+      border-inline-width: 3px 0;
+      border-block-width: 3px 0;
+      border-radius: 2px !important;
+      top: 28%;
+    }
+  }
+
+  // prev
+  :global(.slick-prev) {
+    left: 1px;
+    z-index: 1;
+
+    &::before {
+      transform: rotate(-45deg);
+      left: 4px;
+    }
+  }
+
+  // next
+  :global(.slick-next) {
+    right: 1px;
+
+    &::before {
+      transform: rotate(135deg);
+      right: 3px;
+    }
+  }
+}
