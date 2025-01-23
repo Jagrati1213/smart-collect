@@ -8,7 +8,7 @@ import EDIT_IMG from "../../../../assets/Images/edit.png";
 import LOAN_IMG from "../../../../assets/Images/carbon_global-loan-and-trial.png";
 import DATE_IMG from "../../../../assets/Images/clarity_date-line.png";
 import { PayDetails } from "./PayDetails";
-import { ATTEMPTS_FEATURES_DATA } from "../../../../constant";
+import { RECENT_ENGAGEMENT_APPS_DATA } from "../../../../constant";
 import Style from "./_card.module.scss";
 import { Link } from "react-router-dom";
 import { RecentEngagement } from "../../../RecentEngagement";
@@ -68,7 +68,7 @@ export function Card({
               No. of Attempts: <span style={{ color: "black" }}>2</span>
             </Text>
 
-            <RecentEngagement data={ATTEMPTS_FEATURES_DATA}/>
+            <RecentEngagement recentEngagementAppsData={RECENT_ENGAGEMENT_APPS_DATA}/>
           </Flex>
         </div>
 
