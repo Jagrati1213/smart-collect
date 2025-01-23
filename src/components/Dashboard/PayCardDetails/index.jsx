@@ -8,7 +8,7 @@ const { Title, Text } = Typography;
 export function PayCardDetails({ data }) {
   return (
     <div className={Style.pay_container}>
-      <Flex gap={40} justify="space-between" wrap>
+      <Flex gap={20} justify="space-between" wrap >
         {data?.map((d, index) => {
           return (
             <Link
