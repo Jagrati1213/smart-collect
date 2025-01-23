@@ -10,6 +10,7 @@ import DATE_IMG from "../../../../assets/Images/clarity_date-line.png";
 import { PayDetails } from "./PayDetails";
 import { ATTEMPTS_FEATURES_DATA } from "../../../../constant";
 import Style from "./_card.module.scss";
+import { Link } from "react-router-dom";
 
 const { Title, Text } = Typography;
 
@@ -120,7 +121,7 @@ export function Card({
           <Title level={3} className={`${Style.amount} ${Style.error}`}>
             Rs.{overdueAmount}
           </Title>
-          <button className={Style.amount_button}>Overdue Amount</button>
+          <Link to="#" className={Style.text} style={{textDecoration:"underline"}}>Overdue Amount</Link>
         </Flex>
         <Flex vertical align="center" gap={10}>
           <Title level={3} className={`${Style.amount} ${Style.success}`}>
@@ -143,9 +144,9 @@ export function Card({
           value={feedbackDate}
         />
 
-        <div className={Style.view_link}>
+        <Link to="#" className={Style.view_link}>
           <Text>View</Text>
-        </div>
+        </Link>
       </Flex>
 
       {/* feedback */}

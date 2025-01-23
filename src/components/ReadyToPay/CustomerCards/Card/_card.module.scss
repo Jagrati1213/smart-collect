@@ -129,17 +129,17 @@ $sky-blue: #e8efff;
     border-bottom: 1.05px solid $border-color;
 
     .text {
-      font-size: 18px;
+      font-size: 17px;
       font-weight: 500;
     }
     .amount_button {
       margin: 0;
-      font-weight: 700;
-      padding: 0.5rem 1rem;
-      background-color: var(--dark-blue);
-      box-shadow: 5px 5px 4px 0px #00000040;
-      border-radius: 10px;
-      color: white;
+      // font-weight: 700;
+      // padding: 0.5rem 1rem;
+      // background-color: var(--dark-blue);
+      // box-shadow: 5px 5px 4px 0px #00000040;
+      // border-radius: 10px;
+      // color: white;
       cursor: pointer;
     }
     .amount {
