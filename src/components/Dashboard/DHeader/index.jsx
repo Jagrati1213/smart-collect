@@ -12,7 +12,7 @@ export function DHeader({
 }) {
   return (
     <Flex align="center" justify="space-between">
-      <Title level={3} style={{ margin: "0" }}>
+      <Title level={4} style={{ margin: "0" }}>
         {title}
       </Title>
 
