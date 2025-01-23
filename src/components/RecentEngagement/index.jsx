@@ -1,7 +1,7 @@
 import { Flex } from 'antd';
 import React, { useEffect, useState } from 'react'
-import Style from "./_recent.module.scss";
 import { STATUS_IDS } from '../../constant';
+import Style from "./_recent.module.scss";
 
 export function RecentEngagement({recentEngagementAppsData, indicatorGap = 9}) {
   return (
@@ -15,7 +15,7 @@ export function RecentEngagement({recentEngagementAppsData, indicatorGap = 9}) {
       <Flex gap={6} className={Style.images} justify="space-evenly">
         {recentEngagementAppsData?.map((app, index)=>{
           return <div className={Style.icon_img} key={index}>
-                 <img src={app?.imgSrc} />
+                {app?.imgSrc &&<img src={app?.imgSrc} />}
               </div>})}
       </Flex>  
       
@@ -25,9 +25,9 @@ export function RecentEngagement({recentEngagementAppsData, indicatorGap = 9}) {
 
 const Indicator =({indicateStatus=STATUS_IDS.SUCCESS})=>{
   const colors = [
-    {status:STATUS_IDS.PENDING, value: "#02951a"},
+    {status:STATUS_IDS.SUCCESS, value: "#02951a"},
     {status:STATUS_IDS.REJECTED, value:"#ec3939"},
-    {status:STATUS_IDS.SUCCESS,value:"#cacdca"}
+    {status:STATUS_IDS.PENDING,value:"#cacdca"}
   ];
   const [color, setColor] = useState("gray");
 
