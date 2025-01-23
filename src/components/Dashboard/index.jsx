@@ -18,11 +18,11 @@ export default function Dashboard() {
   const [payDetailsData] = useState(PAYMENT_DETAILS_DATA);
 
   return (
-    <Flex gap={45} vertical>
+    <Flex gap={15} vertical>
       {/* Header */}
       <DHeader title={"Dashboard"} />
 
-      <Flex vertical style={{ padding: "0rem 1rem" }} gap={60}>
+      <Flex vertical gap={25}>
         {/* Data carousel */}
         <DataCarousel data={carouselData} />
 

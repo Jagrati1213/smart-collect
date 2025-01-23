@@ -40,15 +40,15 @@ export function DataCarousel({ data }) {
     //   },
     // ], //TODO: make responsive
   };
-
+  
   return (
     <div className={Style.slider_container}>
       <Slider {...settings}>
         {data?.length
           ? data?.map((d, index) => {
               return (
-                <Flex vertical key={index} className={Style.d_card} gap={20}>
-                  <Title level={2} className={Style.value}>
+                <Flex vertical key={index} className={Style.d_card} gap={0}>
+                  <Title level={3} className={Style.value}>
                     {d?.value}
                   </Title>
                   <Text style={{ fontWeight: 400 }} className={Style.date}>

@@ -24,6 +24,7 @@ export function CustomerDetails({
             boxShadow: "4px 4px 8px rgba(0, 0, 0, 0.1)",
             position: "relative",
             cursor: "pointer",
+            backgroundColor:" #40d0d124"
           }}
           onClick={handleToggleExpansion}
         >
@@ -69,7 +70,7 @@ export function CustomerDetails({
                   return (
                     <Col span={3} key={index}>
                       <Flex vertical align="center">
-                        <Title level={2} style={{ fontWeight: 700 }}>
+                        <Title level={3} style={{ fontWeight: 700 }}>
                           {d?.value}
                         </Title>
                         <Text>{d?.key}</Text>
@@ -83,7 +84,7 @@ export function CustomerDetails({
         </Col>
 
         <Col span={11}>
-          <Flex vertical gap={20}>
+          <Flex vertical gap={11}>
             {customerDetailsData?.map((d, index) => {
               return (
                 <DetailsCard

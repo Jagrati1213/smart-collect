@@ -29,7 +29,7 @@ export function Card({
       {/* customer details */}
       <Flex
         justify="space-between"
-        align="center"
+        align="start"
         className={Style.customer_details}
       >
         <Flex gap={10} align="start">
