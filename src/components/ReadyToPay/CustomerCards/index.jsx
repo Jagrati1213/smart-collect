@@ -16,7 +16,7 @@ export function CustomerCards() {
   };
 
   return (
-    <Row gutter={[60, 60]} align={"middle"} wrap>
+    <Row gutter={[30, 30]} align={"middle"} wrap>
       {Array(6)
         .fill(null)
         ?.map((_, index) => {
