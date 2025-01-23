@@ -178,27 +178,38 @@ export const FEATURES_DATA = [
     name: "IVR Calling",
     imgSrc: IVR_IMG
   },
-]
+];
 
-export const ATTEMPTS_FEATURES_DATA = [
+export const STATUS_IDS={
+  PENDING:"pending",
+  REJECTED:"rejected",
+  SUCCESS:"success",
+};
+
+export const RECENT_ENGAGEMENT_APPS_DATA = [
   {
     name: "Whatsapp Message",
-    imgSrc: WHATSAPP_IMG
+    imgSrc: WHATSAPP_IMG,
+    status: STATUS_IDS.PENDING,
   },
   {
     name: "AI Calling",
-    imgSrc: AI_CALLING_IMG
+    imgSrc: AI_CALLING_IMG,
+    status:STATUS_IDS.REJECTED,
   },
   {
     name: "Blaster Calling",
-    imgSrc: BLASTER_IMG
+    imgSrc: BLASTER_IMG,
+    status: STATUS_IDS.SUCCESS,
   },
   {
     name: "IVR Calling",
-    imgSrc: IVR_IMG
+    imgSrc: IVR_IMG,
+    status: STATUS_IDS.REJECTED,
   },
   {
     name: "Whatsapp Message",
-    imgSrc: WHATSAPP_IMG
+    imgSrc: WHATSAPP_IMG,
+    status: STATUS_IDS.PENDING
   },
 ]
