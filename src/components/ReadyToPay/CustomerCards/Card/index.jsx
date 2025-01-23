@@ -11,6 +11,7 @@ import { PayDetails } from "./PayDetails";
 import { ATTEMPTS_FEATURES_DATA } from "../../../../constant";
 import Style from "./_card.module.scss";
 import { Link } from "react-router-dom";
+import { RecentEngagement } from "../../../RecentEngagement";
 
 const { Title, Text } = Typography;
 
@@ -67,37 +68,7 @@ export function Card({
               No. of Attempts: <span style={{ color: "black" }}>2</span>
             </Text>
 
-            <Flex vertical>
-              <div className={Style.indicator_box}>
-                <Flex gap={9}>
-                  <Flex align="center">
-                    <span className={`${Style.dot} ${Style.green}`}></span>
-                  </Flex>
-                  <Flex align="center">
-                    <span className={`${Style.dot} ${Style.green}`}></span>
-                  </Flex>
-                  <Flex align="center">
-                    <span className={`${Style.dot} ${Style.red}`}></span>
-                  </Flex>
-                  <Flex align="center">
-                    <span className={`${Style.dot} ${Style.grey}`}></span>
-                  </Flex>
-                  <Flex align="center">
-                    <span className={`${Style.dot} ${Style.grey}`}></span>
-                  </Flex>
-                </Flex>
-              </div>
-
-              <Flex gap={6} className={Style.images} justify="space-evenly">
-                {ATTEMPTS_FEATURES_DATA?.map((f, index) => {
-                  return (
-                    <div className={Style.icon_img} key={index}>
-                      <img src={f.imgSrc} />
-                    </div>
-                  );
-                })}
-              </Flex>
-            </Flex>
+            <RecentEngagement data={ATTEMPTS_FEATURES_DATA}/>
           </Flex>
         </div>
 
