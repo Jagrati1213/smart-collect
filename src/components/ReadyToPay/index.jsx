@@ -11,7 +11,7 @@ export default function ReadyToPay() {
   const [isSwitchOn, setIsSwitchOn] = useState(false);
 
   return (
-    <Flex gap={30} vertical className={Style.ready_to_pay}>
+    <Flex gap={20} vertical className={Style.ready_to_pay}>
       {/* Header */}
       <DHeader
         title={`Ready to Pay: ${amount}`}
