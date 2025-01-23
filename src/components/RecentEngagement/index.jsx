@@ -1,39 +1,40 @@
 import { Flex } from 'antd';
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import Style from "./_recent.module.scss";
+import { STATUS_IDS } from '../../constant';
 
-export function RecentEngagement({data}) {
+export function RecentEngagement({recentEngagementAppsData, indicatorGap = 9}) {
   return (
     <Flex vertical className={Style.recent}>
-    <div className={Style.indicator_box}>
-      <Flex gap={9}>
-        <Flex align="center">
-          <span className={`${Style.dot} ${Style.green}`}></span>
+      <div className={Style.indicator_box}>
+        <Flex gap={indicatorGap}>
+        {recentEngagementAppsData?.map((app, index)=> <Indicator indicateStatus={app?.status} key={index}/>)}
         </Flex>
-        <Flex align="center">
-          <span className={`${Style.dot} ${Style.green}`}></span>
-        </Flex>
-        <Flex align="center">
-          <span className={`${Style.dot} ${Style.red}`}></span>
-        </Flex>
-        <Flex align="center">
-          <span className={`${Style.dot} ${Style.grey}`}></span>
-        </Flex>
-        <Flex align="center">
-          <span className={`${Style.dot} ${Style.grey}`}></span>
-        </Flex>
-      </Flex>
-    </div>
+      </div>
 
-    <Flex gap={6} className={Style.images} justify="space-evenly">
-      {data?.map((f, index) => {
-        return (
-          <div className={Style.icon_img} key={index}>
-            <img src={f.imgSrc} />
-          </div>
-        );
-      })}
-    </Flex>
+      <Flex gap={6} className={Style.images} justify="space-evenly">
+        {recentEngagementAppsData?.map((app, index)=>{
+          return <div className={Style.icon_img} key={index}>
+                 <img src={app?.imgSrc} />
+              </div>})}
+      </Flex>  
+      
   </Flex>
   )
+}
+
+const Indicator =({indicateStatus=STATUS_IDS.SUCCESS})=>{
+  const colors = [
+    {status:STATUS_IDS.PENDING, value: "#02951a"},
+    {status:STATUS_IDS.REJECTED, value:"#ec3939"},
+    {status:STATUS_IDS.SUCCESS,value:"#cacdca"}
+  ];
+  const [color, setColor] = useState("gray");
+
+  useEffect(()=>{
+    const selectedIndicate = colors.find((c)=> c.status === indicateStatus).value
+    setColor(selectedIndicate);
+  },[indicateStatus]);
+
+  return <Flex align="center"><span className={`${Style.dot}`} style={{ backgroundColor: color }}></span></Flex>
 }
