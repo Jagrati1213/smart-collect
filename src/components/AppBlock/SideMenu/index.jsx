@@ -192,7 +192,7 @@ export function SideMenu({ collapsedSideMenu }) {
           style={{
             color: "white",
             margin: "0",
-            fontSize: "1.5rem",
+            fontSize: "1.3rem",
             whiteSpace: "nowrap",
           }}
         >
