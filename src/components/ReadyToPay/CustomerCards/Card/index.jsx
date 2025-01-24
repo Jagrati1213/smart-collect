@@ -1,5 +1,5 @@
 import { Flex, Typography } from "antd";
-import React from "react";
+import React, { useState } from "react";
 import PROFILE_IMG from "../../../../assets/Images/gg_profile.png";
 import HISTORY_IMG from "../../../../assets/Images/history.png";
 import PHONE_IMG from "../../../../assets/Images/mi_call.png";
@@ -9,9 +9,10 @@ import LOAN_IMG from "../../../../assets/Images/carbon_global-loan-and-trial.png
 import DATE_IMG from "../../../../assets/Images/clarity_date-line.png";
 import { PayDetails } from "./PayDetails";
 import { RECENT_ENGAGEMENT_APPS_DATA } from "../../../../constant";
-import Style from "./_card.module.scss";
 import { Link } from "react-router-dom";
 import { RecentEngagement } from "../../../RecentEngagement";
+import { FeedbackModal } from "../../../Modals/FeedbackModal";
+import Style from "./_card.module.scss";
 
 const { Title, Text } = Typography;
 
@@ -26,6 +27,16 @@ export function Card({
   promiseDate,
   feedbackDate,
 }) {
+  const [feedbackModalStatus, setFeedbackModalStatus] = useState(false);
+
+  const handleSubmit = ()=>{
+    setFeedbackModalStatus(false);
+  }
+
+  const handleCancel = ()=>{
+    setFeedbackModalStatus(false);
+  }
+
   return (
     <Flex vertical className={Style.card_container}>
       {/* customer details */}
@@ -122,8 +133,13 @@ export function Card({
 
       {/* feedback */}
       <div className={Style.feedback}>
-        <button className={Style.feedback_button}>Feedback</button>
+        <button className={Style.feedback_button} onClick={()=>{setFeedbackModalStatus(true)}}>Feedback</button>
       </div>
+
+      <FeedbackModal 
+        modalStatus={feedbackModalStatus} 
+        handleSubmit={handleSubmit}
+        handleCancel={handleCancel}/>
     </Flex>
   );
 }
