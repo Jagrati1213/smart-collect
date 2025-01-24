@@ -61,7 +61,7 @@ export function Card({
       </Flex>
 
       {/* payments details */}
-      <Flex vertical gap={5} className={Style.payment_details}>
+      <Flex vertical gap={2} className={Style.payment_details}>
         <div className={Style.attempts}>
           <Flex justify="space-between" align="center">
             <Text className={Style.attempts_value}>
@@ -88,14 +88,14 @@ export function Card({
         gap={20}
         className={Style.amount_details}
       >
-        <Flex vertical align="center" gap={10}>
-          <Title level={3} className={`${Style.amount} ${Style.error}`}>
+        <Flex vertical align="center" gap={5}>
+          <Title level={4} className={`${Style.amount} ${Style.error}`}>
             Rs.{overdueAmount}
           </Title>
           <Link to="#" className={Style.text} style={{textDecoration:"underline"}}>Overdue Amount</Link>
         </Flex>
-        <Flex vertical align="center" gap={10}>
-          <Title level={3} className={`${Style.amount} ${Style.success}`}>
+        <Flex vertical align="center" gap={5}>
+          <Title level={4} className={`${Style.amount} ${Style.success}`}>
             Rs.{promiseAmount}
           </Title>
           <Text className={Style.text}>Promise Amount</Text>
@@ -103,7 +103,7 @@ export function Card({
       </Flex>
 
       {/* dates */}
-      <Flex vertical gap={5} className={Style.date_details}>
+      <Flex vertical gap={2} className={Style.date_details}>
         <PayDetails
           image={DATE_IMG}
           title={"Promise date"}

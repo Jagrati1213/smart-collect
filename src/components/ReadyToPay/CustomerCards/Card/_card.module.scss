@@ -19,8 +19,8 @@ $sky-blue: #e8efff;
     padding-bottom: 0;
 
     .profile_img {
-      width: 25px;
-      height: 25px;
+      width: 20px;
+      height: 20px;
       overflow: hidden;
       cursor: pointer;
       img {
@@ -36,7 +36,7 @@ $sky-blue: #e8efff;
     }
 
     .customer_id {
-      font-size: 15px;
+      font-size: 13px;
       color: $blue;
       font-weight: 500;
     }
@@ -58,17 +58,17 @@ $sky-blue: #e8efff;
     }
 
     .title {
-      font-size: 16px;
+      font-size: 14px;
     }
 
     .value {
-      font-size: 16px;
+      font-size: 14px;
       font-weight: 500;
     }
 
     .attempts {
       background-color: $sky-blue;
-      padding: 0.5rem 1rem;
+      padding: 0.2rem 1rem;
       box-shadow: 0px 4.22px 4.22px 0px #00000040;
       border-radius: 6px;
       margin-bottom: 1rem;
@@ -76,9 +76,9 @@ $sky-blue: #e8efff;
       .attempts_value {
         color: $blue;
         font-weight: 500;
-        font-size: 1rem;
+        font-size: 0.9rem;
         span {
-          font-size: 1.2rem;
+          font-size: 1rem;
         }
       }
     }
@@ -90,7 +90,7 @@ $sky-blue: #e8efff;
     border-bottom: 1.05px solid $border-color;
 
     .text {
-      font-size: 17px;
+      font-size: 15px;
       font-weight: 500;
     }
     .amount_button {
@@ -136,11 +136,11 @@ $sky-blue: #e8efff;
 
     .feedback_button {
       width: 50%;
-      padding: 10px;
+      padding: 8px;
       background-color: $sky-blue;
       color: $blue;
       cursor: pointer;
-      font-size: 16px;
+      font-size: 13px;
       clip-path: polygon(
         15% 0%,
         85% 0%,
